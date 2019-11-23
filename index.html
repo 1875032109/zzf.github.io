@@ -2,34 +2,127 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>侧导航条</title>
+<title>模拟制作百度新闻</title>
 <style>
-	div{width: 260px;background: #530053;padding: 15px}
-	div ul li a{text-decoration: none;color: #FBDCFF;font-family:"微软雅黑";font-size: 1.2em;line-height: 1.8em;display: block}
-	div ul li a:hover{background: #F9D2FF;color: #2F003B}
+.NO {
+    margin: 0;
+    padding: 0;
+    background-color: #011E4F;
+    font: 1.2em/1.6 tahoma, microsoft yahei;
+    color: #888;
+    width: 1200px;
+}
+.NO>li {
+	display:inline-block;
+    vertical-align: text-top;
+    list-style: square;
+    list-style-position: inside;
+    color: #F02779;
+}
+.NO>li>span {color: #888;
+}
+.NO1 {
+    margin: 0;
+    padding: 0;
+    height: 120px;
+}
+.NO1>li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    float: left;
+}
+.NO111 {
+    margin: 0;
+    padding: 0;
+}
+.NO111 li {
+    margin: 20px;
+    height: 20px;
+    font: 0.7em/1.0 tahoma, microsoft yahei;
+    color: #888;
+}
+.NO1 img {
+    width: 100px;
+}
+.NO12 {
+    margin: 0;
+    padding: 0;
+    font: 0.7em/1.0 tahoma, microsoft yahei;
+    color: #888;
+    list-style: none;
+}
+.NO2 {
+    margin: 0;
+    padding: 0;
+    background-color: #011E4F;
+    color: #aaa;
+    font: 0.7em/1.0 tahoma, microsoft yahei;
+    color: #888;
+    width: 400px;
+}
+.NO2 li {
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+    line-height: 20px;
+    text-align: center;
+    height: 40px;
+}
+.NO2 li span {
+}
+.NO3 {
+    margin: 0;
+    padding: 0;
+}
+.NO3 li {
+    list-style: decimal;
+    height: 50px;
+    font: 0.7em/1.0 tahoma, microsoft yahei;
+	color: #888;
+}
 </style>
 </head>
 
 <body>
-<div>
-	<ul>
-		<li><a href="https://www.jd.com/chanpin/120681.html">女装 /内衣</a></li>
-		<li><a href="https://www.jd.com/xinghao/131846f4eb052b9e5c22.html">男装 /运动户外 </a></li>
-		<li><a href="http://www.amall.com/store_goods_list.htm?gc_id=65721">女鞋 /男鞋 /箱包 </a></li>
-		<li><a href="http://cosmetic.dangdang.com/">美妆 /个人护理</a></li>
-		<li><a href="http://www.hkw365.com/product/196">腕表 /眼镜 /珠宝饰品</a></li>
-		<li><a href="https://wz.58.com/shoujidiannaoshumahuishou/">手机 /数码 /电脑办公</a></li>
-		<li><a href="https://www.jd.com/phb/6233f53c72bd33a7fd8c.html">母婴玩具</a></li>
-		<li><a href="https://www.zcool.com.cn/collection/ZMjY0NzMwMDg=">零食 /茶酒 /进口食品</a></li>
-		<li><a href="https://list.jd.com/list.html?cat=12218,12221">生鲜水果</a></li>
-		<li><a href="https://shop115853694.taobao.com/">大家电 /生活电器</a></li>
-		<li><a href="https://www.jia400.com/">家具建材</a></li>
-		<li><a href="https://www.jd.com/chanpin/417836.html">汽车 /配件 /用品</a></li>
-		<li><a href="http://list.secoo.com/undefined/1292-0-0-5537-0-4-0-0-1-10-0-0-100-0.shtml">家纺 /家饰 /鲜花</a></li>
-		<li><a href="https://health.jd.com/">医药保健</a></li>
-		<li><a href="http://search.jd.com/search?keyword=%E5%8E%A8%E5%85%B7%E6%94%B6%E7%BA%B3%E5%92%8C&enc=utf-8&qrst=unchange">厨具 /收纳 /宠物</a></li>
-		<li><a href="https://mall.jd.com/index-54526.html">图书音像</a></li>
-	</ul>
-	</div>
+<ul class="NO">
+  <li> <span>更多精彩内容</span>
+    <ul class="NO1">
+      <li> <img src="erwm.png" alt="" > </li>
+      <li>
+        <ul class="NO111">
+          <li>Android版下载</li>
+          <li>iPhone版下载</li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="NO12">
+      <li>扫描二维码, 收看更多新闻</li>
+    </ul>
+  </li>
+  <li><span>相关功能</span>
+    <ul class="NO2">
+      <li><img src="m1.png" alt=""> <br>
+        <span>新闻订阅</span> </li>
+      <li><img src="m2.png" alt=""> <br>
+        <span>个性化新闻</span> </li>
+      <li><img src="m3.png" alt=""> <br>
+        <span>邮件新闻订阅</span> </li>
+      <li><img src="m4.png" alt=""> <br>
+        <span>地区新闻</span> </li>
+      <li><img src="m5.png" alt=""> <br>
+        <span>历史新闻</span> </li>
+      <li><img src="m6.png" alt=""> <br>
+        <span>新闻免费代码</span> </li>
+    </ul>
+  </li>
+  <li><span>百度新闻独家出品</span>
+    <ul class="NO3">
+      <li>新闻由机器选取每5分钟自动更新</li>
+      <li>百度新闻搜索源于互联网新闻网站和频道，系统自动分类排序</li>
+      <li>百度不刊登或转载任何完整的新闻内容</li>
+    </ul>
+  </li>
+</ul>
 </body>
 </html>
