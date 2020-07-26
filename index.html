@@ -1,232 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>注册</title>
-    <style>
-        body{
-            background-image: url("timg.jpg");
-            background-size:cover;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .form{
-            width: 500px;
-            height: 340px;
-            border: 1px solid #fff;
-            margin-left: 500px;
-            background-color: #fff;
-        }
-        .error h1 {
-            float: left;
-            color: #ffbb66;
-            font-size: 20px;
-            margin-left: 60px;
-            margin-top: 20px;
-        }
-        .error .errorMsg {
-            float: right;
-            margin-right: 60px;
-            margin-top: 20px;
-            color: red;
-        }
-        .error {
-            height: 50px;
-            width: 500px;
-            border: 1px solid #fff;
-            margin-left: 500px;
-            margin-top: 100px;
-            background-color: #fff;
-        }
-        .name{
-            width: 300px;
-            height: 30px;
-            margin-top: 0px;
-            color: black;
-        }
-        .password{
-            width: 300px;
-            height: 30px;
-            margin-top: 10px;
-            color: black;
-        }
-        .pad{
-            width: 300px;
-            height: 30px;
-            margin-top: 10px;
-            color: black;
-        }
-        .email{
-            width: 300px;
-            height: 30px;
-            margin-top: 10px;
-            color: black;
-        }
-        /*用户输入验证码*/
-        .check{
-            width: 180px;
-            height: 30px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
-        /*验证码*/
-        .login .vertify-code{
-            width: 100px;
-            height: 30px;
-            line-height: 30px;
-            border: 1px solid #cccccc;
-            font-size: 15px;
-            margin-top: 10px;
-            margin-left: 135px;
-            float: left;
-        }
-        .login .on{
-            width: 120px;
-            height: 30px;
-            margin-right: 60px;
-            margin-top: 20px;
-            float: right;
-            text-decoration: none;
-        }
-        .login a{
-            text-decoration: none;
-            color: #39987c;
-            font-size: 15px;
-        }
-        /*换一张验证码*/
-        .change{
-            display: inline-block;
-            width:100px;
-            height: 33px;
-            line-height: 30px;
-            text-align: center;
-            margin-top: 10px;
-            border: 1px solid #cccccc;
-            color: #fff;
-            background-color: #39987c;
-            margin-left: 10px;
-         }
-        /*注册按钮*/
-        .btn{
-            width: 390px;
-            height: 40px;
-            margin-top: 10px;
-            background-color: #39987c;
-            border: none;
-            color: #fff;
-            margin-left: 10px;
-        }
-    </style>
-</head>
-<body>
-<div class="error">
-    <h1>欢迎进行用户注册</h1>
-    <span class="errorMsg"></span>
-</div>
-<div class="form" align="center">
-    <form action="login.html" method="post">
-        <label>用户名称：</label><input type="text" name="name" class="name" placeholder="请输入用户名"/></br>
-        <label>用户密码：</label><input type="password" name="password" class="password" placeholder="请输入密码"/></br>
-        <label>确认密码：</label><input type="password" name="pad" class="pad" placeholder="请再次输入密码"/></br>
-        <label>电子邮件：</label><input type="text" name="email" class="email" placeholder="请输入邮箱地址"/></br>
-        <label>验证码：</label><input type="text" class="check"/>
-        <label class="change">换一张</label></br>
-        <div class="login">
-            <div class="vertify-code"></div>
-            <div class="on">已有帐号？
-                <a href="login.html">登录</a>
-            </div>
-        </div>
-        <input type="submit" value="注册" class="btn" />
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Strata by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/head.jpg" alt="" /></a>
+					<h1><strong>我是朱志锋</strong>, 来自湖北黄冈,</br>现就读湖北工业大学</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>记录学习，生活中的点滴.</h2>
+						</header>
+						<p>本人精通c，c++，java，python等多门语言，熟悉大数据项目开发和Javaweb开发流程</p>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>照片墙</h2>
+						<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<h3>佐助</h3>
+								<p>2020/7/26</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+								<h3>鸣人</h3>
+								<p>2020/7/26</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+								<h3>火影忍者</h3>
+								<p>2020/7/26</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+								<h3>火影忍者</h3>
+								<p>2020/7/26</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+								<h3>火影忍者</h3>
+								<p>2020/7/26</p>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+								<h3>火影忍者</h3>
+								<p>2020/7/26</p>
+							</article>
+						</div>
+					</section>
 
 
-    </form>
-</div>
-    <script src="jquery-1.7.2.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            num_random();
-            $(".change").click(function () {
-                num_random();
-            })
-            $(".btn").click(function () {
-                // 验证用户名：必须字母,数字,下划线组成，并且长度为2到10位
-                //1 获取用户名输入框里的内容
-                let nameText = $(".name").val();
-                //2 创建正则表达式对象
-                let namePat = /^\w{2,10}$/;
-                //3 使用test方法验证
-                if (!namePat.test(nameText)) {
-                    $("span.errorMsg").text("用户名不合法!");
-                    return false;
-                }
-                // 验证密码：必须由字母，数字下划线组成，并且长度为6到16位
-                //1 获取用户名输入框里的内容
-                let passwordText = $(".password").val();
-                //2 创建正则表达式对象
-                let passwordPat= /^\w{6,16}$/;
-                //3 使用test方法验证
-                if (!passwordPat.test(passwordText)) {
-                    $("span.errorMsg").text("密码不合法!");
-                    return false;
-                }
-                // 验证确认密码：和密码相同
-                //1 获取确认密码内容
-                let padText = $(".pad").val();
-                //2 和密码相比较
-                if (padText != passwordText) {
-                    $("span.errorMsg").text("两次输入密码不一致!");
-                    return false;
-                }
-                // 邮箱验证：xxxxx@xxx.com
-                //1 获取邮箱里的内容
-                let emailText = $(".email").val();
-                //2 创建正则表达式对象
-                let emailPatt = /^[a-z\d]+(\.[a-z\d]+)*@([\da-z](-[\da-z])?)+(\.{1,2}[a-z]+)+$/;
-                //3 使用test方法验证是否合法
-                if (!emailPatt.test(emailText)) {
-                    $("span.errorMsg").text("邮箱格式不合法！");
-                    return false;
-                }
-                //验证码验证
-                let val = $(".check").val().toUpperCase();
-                let text = $(".vertify-code").text().toUpperCase();
-                if (val === text) {
-                    $("span.errorMsg").text("注册通过!");
-                    return true;
-                } else {
-                    $("span.errorMsg").text("验证码错误！");
-                    return false;
-                }
-                $("span.errorMsg").text("");
-            })
-            function num_random() {
-                let arr_code = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-                    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-                    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-                let arr_color = ['#FF0033', '#006699', '#993366', '#FF9900', '#66CC66', '#FF33CC'];
-                let arr_back = ['#fffff0', '#f0ffff', '#f0fff0', '#fff0f0'];
-                let arr_weight = ['normal', 'bold', 'bolder', 'lighter'];
-                let arr_style = ['normal', 'italic', 'oblique'];
-                let index_back = Math.floor(Math.random() * 3);
-                let index_color = Math.floor(Math.random() * 5);
-                let str = '';
-                let num;
-                for (let i = 0; i < 6; i++) {
-                    num = Math.floor(arr_code.length * Math.random());
-                    str = str + arr_code[num];
-                }
-                $(".vertify-code").css({
-                    background: arr_back[index_back],
-                    color: arr_color[index_color],
-                    fontWeight: arr_weight[index_back],
-                    fontStyle: arr_style[index_back],
-                })
-                $(".vertify-code").text(str);
-            }
-        })
-    </script>
-</body>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
