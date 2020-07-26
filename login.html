@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <style>
+        body{
+            background-image: url("timg.jpg");
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ha h1 {
+            float: left;
+            color: #ffbb66;
+            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .ha a {
+            float: right;
+            margin-right: 80px;
+            margin-top: 20px;
+            color: #39987c;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .ha {
+            height: 50px;
+            width: 480px;
+            border: 1px solid #fff;
+            margin-left: 500px;
+            margin-top: 100px;
+            background-color: #fff;
+        }
+        .error h1{
+            float: left;
+            font-size: 15px;
+            margin-left: 20px;
+            color: #666;
+        }
+        .error .errorMsg {
+            float: right;
+            margin-right: 70px;
+            color: red;
+        }
+        .error {
+            height: 20px;
+            width: 480px;
+            border: 1px solid #fff;
+            margin-left: 500px;
+            background-color: #fff;
+        }
+        .form{
+              width: 480px;
+              height: 280px;
+              border: 1px solid #fff;
+              margin-left: 500px;
+              background-color: #fff;
+          }
+        .name{
+            width: 300px;
+            height: 40px;
+            margin-top: 10px;
+            color: black;
+            margin-right: 50px;
+        }
+        .password{
+            width: 300px;
+            height: 40px;
+            margin-top: 20px;
+            color: black;
+            margin-right: 50px;
+        }
+        /*用户输入验证码*/
+        .check{
+            width: 175px;
+            height: 30px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+        /*换一张验证码*/
+        .change{
+            display: inline-block;
+            width:100px;
+            height: 33px;
+            line-height: 30px;
+            text-align: center;
+            margin-top: 10px;
+            border: 1px solid #cccccc;
+            color: #fff;
+            background-color: #39987c;
+            margin-right: 35px;
+        }
+        /*验证码*/
+        .login .vertify-code{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #cccccc;
+            font-size: 15px;
+            margin-top: 10px;
+            margin-left: 100px;
+            float: left;
+        }
+        /*登录按钮*/
+        .btn{
+            width: 390px;
+            height: 40px;
+            margin-top: 20px;
+            background-color: #39987c;
+            border: none;
+            color: #fff;
+            margin-right: 45px;
+        }
+    </style>
+</head>
+<body>
+<div class="ha">
+    <h1>欢迎进行用户登录</h1>
+        <a href="index.html">还未注册？</a>
+</div>
+<div class="error">
+    <h1>请输入用户名和密码</h1>
+    <span class="errorMsg"></span>
+</div>
+<div class="form" align="center">
+    <form action="http://localhost:8080" method="post">
+        <label>用户名称：</label><input type="text" name="name" class="name" placeholder="请输入用户名"/></br>
+        <label>用户密码：</label><input type="password" name="password" class="password" placeholder="请输入密码"/></br>
+        <label>验证码：</label><input type="text" class="check"/>
+        <label class="change">换一张</label></br>
+        <div class="login">
+            <div class="vertify-code"></div>
+        </div>
+        <input type="submit" value="登录" class="btn"/>
+
+    </form>
+</div>
+    <script src="jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            num_random();
+            $(".change").click(function () {
+                num_random();
+            })
+            $(".btn").click(function () {
+                // 验证用户名：必须由字母，数字下划线组成，并且长度为2到10位
+                //1 获取用户名输入框里的内容
+                let nameText = $(".name").val();
+                //2 创建正则表达式对象
+                let namePat = /^\w{2,10}$/;
+                //3 使用test方法验证
+                if (!namePat.test(nameText)) {
+                    $("span.errorMsg").text("用户名不合法!");
+                    return false;
+                }
+                // 验证密码：必须由字母，数字下划线组成，并且长度为6到16位
+                //1 获取用户名输入框里的内容
+                let passwordText = $(".password").val();
+                //2 创建正则表达式对象
+                let passwordPat= /^\w{6,16}$/;
+                //3 使用test方法验证
+                if (!passwordPat.test(passwordText)) {
+                    $("span.errorMsg").text("密码不合法!");
+                    return false;
+                }
+                //验证码验证
+                let val = $(".check").val().toUpperCase();
+                let text = $(".vertify-code").text().toUpperCase();
+                if (val === text) {
+                    $("span.errorMsg").text("注册通过!");
+                    return true;
+                } else {
+                    $("span.errorMsg").text("验证码错误！");
+                    return false;
+                }
+                $("span.errorMsg").text("");
+            })
+            function num_random() {
+                let arr_code = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+                    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+                let arr_color = ['#FF0033', '#006699', '#993366', '#FF9900', '#66CC66', '#FF33CC'];
+                let arr_back = ['#fffff0', '#f0ffff', '#f0fff0', '#fff0f0'];
+                let arr_weight = ['normal', 'bold', 'bolder', 'lighter'];
+                let arr_style = ['normal', 'italic', 'oblique'];
+                let index_back = Math.floor(Math.random() * 3);
+                let index_color = Math.floor(Math.random() * 5);
+                let str = '';
+                let num;
+                for (let i = 0; i < 6; i++) {
+                    num = Math.floor(arr_code.length * Math.random());
+                    str = str + arr_code[num];
+                }
+                $(".vertify-code").css({
+                    background: arr_back[index_back],
+                    color: arr_color[index_color],
+                    fontWeight: arr_weight[index_back],
+                    fontStyle: arr_style[index_back],
+                })
+                $(".vertify-code").text(str);
+            }
+        })
+    </script>
+</body>
+</html>
